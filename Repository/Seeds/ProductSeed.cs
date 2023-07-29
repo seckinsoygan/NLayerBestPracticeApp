@@ -15,7 +15,7 @@ namespace Repository.Seeds
 				Name = "Kalem 1",
 				Price = 1000,
 				Stock = 20,
-				CreatedDate = DateTime.Now
+				CreatedDate = DateTime.Now,
 			},
 			new Product
 			{

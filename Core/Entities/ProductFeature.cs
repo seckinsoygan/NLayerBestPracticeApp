@@ -1,8 +1,9 @@
-﻿namespace Core.Entities
+﻿using Core.Entities.Shared;
+
+namespace Core.Entities
 {
-	public class ProductFeature : Product
+	public class ProductFeature : BaseEntity
 	{
-		public int Id { get; set; }
 		public string Color { get; set; }
 		public int Height { get; set; }
 		public int Width { get; set; }

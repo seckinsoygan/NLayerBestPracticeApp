@@ -18,7 +18,7 @@ namespace Repository
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-
+			base.OnModelCreating(modelBuilder);
 			//Best Practice değil bu örnek olması açısından yapıldı. Normalde seed dataları kendine özgü classlarda tutuyoruz. Seeds klasörünün altında örneklerini bulabilirsin.
 			modelBuilder.Entity<ProductFeature>().HasData(new ProductFeature()
 			{
@@ -36,8 +36,6 @@ namespace Repository
 				Width = 100,
 				ProductId = 2,
 			});
-
-			base.OnModelCreating(modelBuilder);
 		}
 	}
 }
