@@ -7,11 +7,12 @@ namespace Core.Interfaces
 		Task<T> GetByIdAsync(int id);
 		IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
 		IQueryable<T> Where(Expression<Func<T, bool>> expression);
-		bool AnyAsync(Expression<Func<T, bool>> expression);
+		Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
 		Task AddRangeAsync(IEnumerable<T> entities);
-		Task<T> AddAsync(T entity);
+		Task AddAsync(T entity);
 		void Update(T entity);
 		void Remove(T entity);
+		void RemoveRange(IEnumerable<T> entities);
 
 	}
 }

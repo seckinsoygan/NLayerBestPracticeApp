@@ -17,6 +17,26 @@ namespace Repository
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+
+			//Best Practice değil bu örnek olması açısından yapıldı. Normalde seed dataları kendine özgü classlarda tutuyoruz. Seeds klasörünün altında örneklerini bulabilirsin.
+			modelBuilder.Entity<ProductFeature>().HasData(new ProductFeature()
+			{
+				Id = 1,
+				Color = "Kırmızı",
+				Height = 200,
+				Width = 100,
+				ProductId = 1,
+			},
+			new ProductFeature()
+			{
+				Id = 2,
+				Color = "Mavi",
+				Height = 200,
+				Width = 100,
+				ProductId = 2,
+			});
+
 			base.OnModelCreating(modelBuilder);
 		}
 	}
