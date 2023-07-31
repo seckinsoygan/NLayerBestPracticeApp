@@ -8,11 +8,10 @@ namespace Repository
 	{
 		public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
 		{
-
 		}
-		DbSet<Category> Categories { get; set; }
-		DbSet<Product> Products { get; set; }
-		DbSet<ProductFeature> ProductFeatures { get; set; }
+		public DbSet<Category> Categories { get; set; }
+		public DbSet<Product> Products { get; set; }
+		public DbSet<ProductFeature> ProductFeatures { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

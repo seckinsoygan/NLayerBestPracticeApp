@@ -8,16 +8,16 @@ using WebAPI.Controllers.Shared;
 
 namespace WebAPI.Controllers
 {
-	[Route("api/[controller]")]
-	[ApiController]
 	public class ProductsController : CustomBaseController
 	{
 		private readonly IMapper _mapper;
 		private readonly IService<Product> _service;
-		public ProductsController(IMapper mapper, IService<Product> service)
+		private readonly IProductService _productService;
+		public ProductsController(IMapper mapper, IService<Product> service, IProductService productService)
 		{
 			_mapper = mapper;
 			_service = service;
+			_productService = productService;
 		}
 		[HttpGet]
 		public async Task<IActionResult> GetAll()
@@ -52,6 +52,11 @@ namespace WebAPI.Controllers
 			var product = await _service.GetByIdAsync(id);
 			await _service.RemoveAsync(product);
 			return CreateActionResult(CustomResponseDto<NoContentDto>.Success(204));
+		}
+		[HttpGet("[action]")]
+		public async Task<IActionResult> GetProductsWithCategory()
+		{
+			return CreateActionResult(await _productService.GetProductsWithCategory());
 		}
 	}
 }

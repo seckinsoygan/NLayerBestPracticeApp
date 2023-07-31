@@ -11,6 +11,7 @@ namespace Service.Mapping
 			CreateMap<Product, ProductDto>().ReverseMap();
 			CreateMap<Category, CategoryDto>().ReverseMap();
 			CreateMap<ProductFeature, ProductFeatureDto>().ReverseMap();
+			CreateMap<Product, ProductWithCategoryDto>();
 		}
 	}
 }
