@@ -11,6 +11,7 @@ using Service.Services;
 using Service.Validations;
 using System.Reflection;
 using WebAPI.Filters;
+using WebAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,6 +55,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UserCustomException();
 
 app.UseAuthorization();
 

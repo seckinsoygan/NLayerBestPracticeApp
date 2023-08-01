@@ -8,6 +8,7 @@ namespace Core.Dtos.ResponseDtos
 
 		[JsonIgnore]
 		public int StatusCode { get; set; }
+		public string Error { get; set; }
 
 		public List<string> Errors { get; set; }
 
@@ -22,6 +23,10 @@ namespace Core.Dtos.ResponseDtos
 		public static CustomResponseDto<T> Fail(int statusCode, List<string> errors)
 		{
 			return new CustomResponseDto<T> { StatusCode = statusCode, Errors = errors };
+		}
+		public static CustomResponseDto<T> Fail(int statusCode, string error)
+		{
+			return new CustomResponseDto<T> { StatusCode = statusCode, Error = error };
 		}
 	}
 }
