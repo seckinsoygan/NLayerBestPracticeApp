@@ -3,17 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{C1974ADA-62A3-4AB9-A739-22F702C487D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{C1974ADA-62A3-4AB9-A739-22F702C487D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{A18CB855-8415-4DAA-81B1-8CE666437D87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{A18CB855-8415-4DAA-81B1-8CE666437D87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{287F8343-3596-432F-B5EC-BC23DE650DE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{287F8343-3596-432F-B5EC-BC23DE650DE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{4707B261-D584-4BB3-A066-A2B1091F108C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{4707B261-D584-4BB3-A066-A2B1091F108C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVC", "WebMVC\WebMVC.csproj", "{AA2C03B8-9CEA-413E-9F2A-62C3C998171D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching", "Caching\Caching.csproj", "{C6C9F20B-9524-462B-825F-54B1515A6BD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMVC", "WebMVC\WebMVC.csproj", "{AA2C03B8-9CEA-413E-9F2A-62C3C998171D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{AA2C03B8-9CEA-413E-9F2A-62C3C998171D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA2C03B8-9CEA-413E-9F2A-62C3C998171D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA2C03B8-9CEA-413E-9F2A-62C3C998171D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6C9F20B-9524-462B-825F-54B1515A6BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6C9F20B-9524-462B-825F-54B1515A6BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6C9F20B-9524-462B-825F-54B1515A6BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6C9F20B-9524-462B-825F-54B1515A6BD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

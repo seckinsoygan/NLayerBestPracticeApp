@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Core.Dtos;
-using Core.Dtos.ResponseDtos;
 using Core.Entities;
 using Core.Interfaces;
 using Core.UnitOfWorks;
@@ -17,11 +16,11 @@ namespace Service.Services
 			_productRepository = productRepository;
 		}
 
-		public async Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetProductsWithCategory()
+		public async Task<List<ProductWithCategoryDto>> GetProductsWithCategory()
 		{
 			var products = await _productRepository.GetProductsWithCategory();
 			var productDto = _mapper.Map<List<ProductWithCategoryDto>>(products);
-			return CustomResponseDto<List<ProductWithCategoryDto>>.Success(200, productDto);
+			return productDto;
 		}
 	}
 }
