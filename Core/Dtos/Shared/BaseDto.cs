@@ -1,8 +1,8 @@
 ﻿namespace Core.Dtos.Shared
 {
-	public abstract class BaseDto
-	{
-		public int Id { get; set; }
-		public DateTime CreatedDate { get; set; }
-	}
+    public abstract class BaseDto
+    {
+        public int Id { get; set; }
+        public DateTime CreatedDate { get; set; }
+    }
 }

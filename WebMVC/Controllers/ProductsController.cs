@@ -25,9 +25,10 @@ namespace WebMVC.Controllers
             return View(await _productService.GetProductsWithCategory());
         }
 
+        [HttpGet]
         public async Task<IActionResult> Save()
         {
-            var categories = _categoryService.GetAllAsync();
+            var categories = await _categoryService.GetAllAsync();
             var categoriesDto = _mapper.Map<List<CategoryDto>>(categories);
 
             ViewBag.categories = new SelectList(categoriesDto, "Id", "Name");

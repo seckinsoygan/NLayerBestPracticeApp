@@ -1,6 +1,6 @@
 ﻿namespace Core.Dtos.ResponseDtos
 {
-	public class NoContentDto
-	{
-	}
+    public class NoContentDto
+    {
+    }
 }
